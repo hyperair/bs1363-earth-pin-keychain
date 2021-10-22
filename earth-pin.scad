@@ -42,11 +42,11 @@ module pin_shape()
 module stopper()
 {
     difference() {
-        linear_extrude(8)
+        linear_extrude(8.4)
         difference() {
-            round_2d(1)
+            round_2d(2)
             union() {
-                csquare([5, 6], center=Y);
+                csquare([6, 5], center=Y);
 
                 translate([7.3, 0])
                 circle(d=10);
@@ -56,9 +56,9 @@ module stopper()
             circle(d=5);
         }
 
-        translate([2.2, 0, 2.8])
+        translate([1.89, 0, 2.72])
         rotate(90, X)
-        mcad_rounded_cube([20, 20, 20], radius=7, sidesonly=true, center=Z);
+        mcad_rounded_cube([20, 20, 20], radius=5, sidesonly=true, center=Z);
     }
 }
 
